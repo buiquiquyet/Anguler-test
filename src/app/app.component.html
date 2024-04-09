@@ -1,2 +1,11 @@
-<app-header></app-header>
-<app-footer></app-footer>
+<!-- <app-header></app-header>
+<app-footer></app-footer> -->
+
+<nav>
+  <ul>
+    <li><a routerLink="/headerComponent" routerLinkActive="active" ariaCurrentWhenActive="page">header Component</a></li>
+    <li><a routerLink="/footerComponent" routerLinkActive="active" ariaCurrentWhenActive="page">footer Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
