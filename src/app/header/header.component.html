@@ -1,1 +1,25 @@
-<p>header works!</p>
+<!-- <p>header works!</p>
+<h1>{{title}}</h1>
+<h2>@if(title !== '') {
+  {{title}}
+}
+</h2> -->
+<h3 *ngIf="getSalary() > 20">
+  {{name}}
+</h3>
+<input type="text" [(ngModel)]="name"/>
+<!-- <div>
+  <ng-template [ngTemplateOutlet]="outlet" [ngOutletContext]="context"></ng-template>
+</div> -->
+@for (item of arr; track $index) {
+  <div>{{$index + 1}} - {{item.name}} - {{item.age }} - {{item.age | test | uppercase}}</div>
+
+}
+<div [ngClass]="{'div' : age < 20}" >
+  {{arr[0].name }}
+</div>
+
+<div *ngFor="let user of arrUsers">
+  <div>{{user.name}}</div>
+</div>
+<button (click)="changeName()">Change Name</button>
